@@ -1,0 +1,139 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+  --font-size: 16px;
+  --gray-100: #efefef;
+  --gray-900: #25252b;
+  --white-900: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: var(--gray-100);
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 2rem;
+  margin: auto;
+}
+
+.header {
+  background-color: var(--gray-900);
+  text-align: center;
+  height: 7rem;
+}
+
+.pokemon-logo {
+  width: 250px;
+}
+
+.pokebola {
+  width: 250px;
+}
+
+.pokebola-image {
+  width: 100%;
+  cursor: pointer;
+  filter: drop-shadow(15px 15px 15px hsl(76deg 0% 0% /0.5));
+}
+
+.pokebola-image:active {
+  animation: shake 0.2s;
+  animation-iteration-count: 200;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 10px;
+  }
+  75% {
+    margin-left: -10px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+.title-start {
+  text-align: center;
+}
+
+.title-start.select {
+  display: none;
+}
+
+.pokestop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  padding: 2rem 0;
+  min-height: calc(100vh - 7rem - 52px);
+}
+
+.pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5rem;
+
+  background: linear-gradient(45deg, #ffeb3b, #ff9800);
+  color: var(--white-900);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 100%;
+  filter: drop-shadow(15px 15px 15px hsl(76deg 0% 0% /0.5));
+}
+
+.pokemon-wrapperImage {
+  width: 250px;
+  height: 250px;
+  background-color: var(--gray-100);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-image {
+  width: 100%;
+  filter: drop-shadow(15px 15px 15px hsl(76deg 0% 0% /0.5));
+}
+
+.pokemon-image {
+  text-transform: uppercase;
+  text-align: center;
+}
+.pokemon-abilities {
+  text-transform: capitalize;
+  margin-left: 18px;
+}
+
+.footer {
+  background-color: var(--gray-900);
+  color: var(--white-900);
+  text-align: center;
+  padding: 1rem 0;
+  height: 52px;
+  text-transform: uppercase;
+}
